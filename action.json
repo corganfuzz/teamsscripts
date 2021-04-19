@@ -1,0 +1,127 @@
+{
+    "type": "message",
+    "attachments": [
+        {
+            "contentType": "application/vnd.microsoft.card.adaptive",
+            "content": {
+                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                "type": "AdaptiveCard",
+                "version": "1.2",
+                "body": [
+                    {
+                        "type": "ColumnSet",
+                        "columns": [
+                            {
+                                "width": "stretch",
+                                "items": [
+                                    {
+                                        "type": "TextBlock",
+                                        "text": "Don't Panic!"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "ColumnSet",
+                        "spacing": "large",
+                        "separator": true,
+                        "columns": [
+                            {
+                                "width": "stretch",
+                                "items": [
+                                    {
+                                        "type": "TextBlock",
+                                        "spacing": "none",
+                                        "isSubtle": true,
+                                        "wrap": true,
+                                        "text": "You wake up. The room is spinning very gently round your head. Or at least it would be if you could see it which you can't."
+                                    },
+                                    {
+                                        "type": "TextBlock",
+                                        "spacing": "none",
+                                        "isSubtle": true,
+                                        "wrap": true,
+                                        "text": "It is pitch black."
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "Container",
+                        "items": [
+                            {
+                                "type": "ColumnSet",
+                                "columns": [
+                                    {
+                                        "width": "32px"
+                                    },
+                                    {
+                                        "width": "stretch",
+                                        "items": [
+                                            {
+                                                "type": "ActionSet",
+                                                "actions": [
+                                                    {
+                                                        "type": "Action.Http",
+                                                        "title": "Light",
+                                                        "method": "POST",
+                                                        "headers": [
+                                                            {
+                                                                "name": "Authorization",
+                                                                "value": ""
+                                                            }
+                                                        ],
+                                                        "url": "<LOGICAPPURLHERE>",
+                                                        "body": "{'currentRoom':'room1','currentState':'roomState1','action':null,'exit':null,'object':null,'objectAction':null,'userEmail':'jwiersem@msclouddeveloper.com'}"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "Container",
+                        "items": [
+                            {
+                                "type": "ColumnSet",
+                                "columns": [
+                                    {
+                                        "width": "32px"
+                                    },
+                                    {
+                                        "width": "stretch",
+                                        "items": [
+                                            {
+                                                "type": "ActionSet",
+                                                "actions": [
+                                                    {
+                                                        "type": "Action.Http",
+                                                        "title": "South",
+                                                        "method": "POST",
+                                                        "headers": [
+                                                            {
+                                                                "name": "Authorization",
+                                                                "value": ""
+                                                            }
+                                                        ],
+                                                        "url": "<LOGICAPPURLHERE>",
+                                                        "body": "{'currentRoom':'room1','currentState':'roomState1','action':null,'exit':null,'object':null,'objectAction':null,'userEmail':'jwiersem@msclouddeveloper.com'}"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,93 @@
+{
+    "@type": "MessageCard",
+    "@context": "http://schema.org/extensions",
+    "themeColor": "359914",
+    "title": "New APKs. ready for deployment",
+    "summary": "brandnewreactnative #89 succeeded",
+    "sections": [
+        {
+            "activityTitle": "brandnewreactnative-1.5.0-04159ec+89-UAT.apk\u003cbr\u003ebrandnewreactnative-1.5.0-04159ec+89-CTE.apk",
+            "activitySubtitle": "",
+            "activityImage": "https://concrete-userfiles-production.s3.us-west-2.amazonaws.com/repositories/3928786b7f122c73/avatar/avatar.png",
+            "facts": null,
+            "markdown": false,
+            "text": "Last commit by corganfuzz\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cb\u003eInstructions\u003c/b\u003e\u003cbr/\u003e\n1. An email has been sent to all POs for easy deployment\u003cbr/\u003e\n2. That is all.\n\n",
+            "heroImage": {
+                "image": ""
+            }
+        },
+        {
+            "activityTitle": "",
+            "activitySubtitle": "",
+            "activityImage": "",
+            "facts": [
+                {
+                    "name": "Build Status",
+                    "value": "\u003cspan style=\"color:#359914\"\u003eSuccess\u003c/span\u003e"
+                },
+                {
+                    "name": "Build Number",
+                    "value": "89"
+                },
+                {
+                    "name": "Git Branch",
+                    "value": "master"
+                },
+                {
+                    "name": "Build Triggered",
+                    "value": "Sun, 18 Apr 2021 17:21:21 UTC"
+                },
+                {
+                    "name": "Workflow",
+                    "value": "Teamer"
+                }
+            ],
+            "markdown": true,
+            "text": "",
+            "heroImage": {
+                "image": ""
+            }
+        }
+    ],
+    "potentialAction": [
+        {
+            "@type": "OpenUri",
+            "name": "Go To Repo",
+            "targets": [
+                {
+                    "os": "default",
+                    "uri": "git@bitbucket.org:GFuzz77/brandnewreactnative.git"
+                }
+            ]
+        },
+        {
+            "@type": "OpenUri",
+            "name": "Go To Build",
+            "targets": [
+                {
+                    "os": "default",
+                    "uri": "https://app.bitrise.io/build/e2145f99096087b1"
+                }
+            ]
+        },
+        {
+            "@type": "ActionCard",
+            "name": "Send Feedback",
+            "actions": [
+                {
+                    "@type": "HttpPOST",
+                    "name": "DEPLOY TO UAT",
+                    "isPrimary": true,
+                    "target": "https://app.bitrise.io/app/3928786b7f122c73/build/start.json",
+                    "headers": [
+                        {
+                            "name": "Authorization",
+                            "value": null
+                        }
+                    ],
+                    "body": "{\"hook_info\":{\"type\":\"bitrise\",\"build_trigger_token\":\"wNdFTVz4KfHDUalK8BLApQ\"},\"build_params\":{\"branch\":\"master\"},\"triggered_by\":\"curl\"}"
+                }
+            ]
+        }
+    ]
+}

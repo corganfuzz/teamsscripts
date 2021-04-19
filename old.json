@@ -1,0 +1,31 @@
+{
+    "@@type": "ActionCard",
+    "name": "Approve",
+    "inputs": [
+        {
+            "@@type": "TextInput",
+            "id": "ApprovalComment",
+            "isMultiline": true,
+            "title": "Comment (optional)"
+        }
+    ],
+    "actions": [
+        {
+            "@@type": "HttpPOST",
+            "name": "Submit",
+            "target": "FLOW URL",
+            "headers": [
+                {
+                    "name": "content-type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "authorization",
+                    "value": ""
+                }
+            ],
+            "bodyContentType": "application/json",
+            "body": "{\"approved\":true, \"comment\":\"{{ApprovalComment.value}}\", \"taskID\":10"
+        }
+    ]
+}
