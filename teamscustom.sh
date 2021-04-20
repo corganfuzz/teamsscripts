@@ -79,9 +79,15 @@ PAYLOAD='{
             "headers": [
                 {
                     "name": "Authorization",
-                    "value": null
+                    "value": null.
+                },
+                {
+                    "CARD-ACTION-STATUS": "Successfully completed task.",
+                    "CARD-UPDATE-IN-BODY": "true",
                 }
             ],
+            status: 200,
+            isRaw: true,
             "body": "{
                 \"hook_info\": {
                   \"type\": \"bitrise\",
@@ -98,14 +104,14 @@ PAYLOAD='{
                     }
                   ]
                 },
-                \"triggered_by\": \"curl\"
+                \"triggered_by\": \"gerd\"
             }"
         }
     ]
 }'
 
 function curl_cmd() {
-    curl -H 'Content-Type: application/json' -d "$PAYLOAD" "$WEBHOOK"
+    curl -H 'Content-Type: application/json' -d "$PAYLOAD" "$hooker"
 }
 
 main() {

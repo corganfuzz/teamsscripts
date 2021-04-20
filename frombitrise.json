@@ -2,77 +2,39 @@
     "@type": "MessageCard",
     "@context": "http://schema.org/extensions",
     "themeColor": "359914",
-    "title": "New APKs. ready for deployment",
-    "summary": "brandnewreactnative #89 succeeded",
+    "title": "Ready for Deployment",
+    "summary": "Builds from Bitrise",
     "sections": [
         {
-            "activityTitle": "brandnewreactnative-1.5.0-04159ec+89-UAT.apk\u003cbr\u003ebrandnewreactnative-1.5.0-04159ec+89-CTE.apk",
-            "activitySubtitle": "",
+            "activityTitle": "\u003ch1\u003eKeyz Android\u003c/h1\u003e",
+            "activitySubtitle": "Today is Sun, 18 Apr 2021 17:21:21 UTC",
             "activityImage": "https://concrete-userfiles-production.s3.us-west-2.amazonaws.com/repositories/3928786b7f122c73/avatar/avatar.png",
             "facts": null,
             "markdown": false,
-            "text": "Last commit by corganfuzz\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cb\u003eInstructions\u003c/b\u003e\u003cbr/\u003e\n1. An email has been sent to all POs for easy deployment\u003cbr/\u003e\n2. That is all.\n\n",
-            "heroImage": {
-                "image": ""
-            }
+            "text": "\u003ctable style=\"border:1px solid;border-collapse:collapse; padding: 4px\"\u003e\n  \u003ctr\u003e\n    \u003cth style=\"padding: 4px\"\u003ePlayStore Status\u003c/th\u003e\n    \u003cth style=\"padding: 4px\"\u003eEnv\u003c/th\u003e\n    \u003cth style=\"padding: 4px\"\u003eArtifactory Url\u003c/th\u003e\n  \u003c/tr\u003e\n  \u003ctr\u003e\n    \u003ctd style=\"border:1px solid; padding: 4px\"\u003e \u003cb\u003eDeployed\u003c/b\u003e \u003c/td\u003e\n    \u003ctd style=\"border:1px solid; padding: 4px\"\u003e\u003cb\u003eSIT\u003c/b\u003e\u003c/td\u003e\n    \u003ctd style=\"border:1px solid; padding: 4px\"\u003e\u003ca href=\"https://www.w3schools.com\"\u003ebrandnewreactnative-1.5.0-04159ec+123-SIT\u003c/a\u003e\u003c/td\u003e\n  \u003c/tr\u003e\n  \u003ctr\u003e\n    \u003ctd style=\"border:1px solid; padding: 4px\"\u003e Not yet \u003c/td\u003e\n    \u003ctd style=\"border:1px solid; padding: 4px\"\u003e\u003cb\u003eUAT\u003c/b\u003e\u003c/td\u003e\n    \u003ctd style=\"border:1px solid; padding: 4px\"\u003e\u003ca href=\"https://www.w3schools.com\"\u003ebrandnewreactnative-1.5.0-04159ec+123-UAT\u003c/a\u003e\u003c/td\n  \u003c/tr\u003e\n  \u003ctr\u003e\n    \u003ctd style=\"border:1px solid; padding: 4px\"\u003e Not yet \u003c/td\u003e\n    \u003ctd style=\"border:1px solid; padding: 4px\"\u003e\u003cb\u003eCTE\u003c/b\u003e\u003c/td\u003e\n    \u003ctd style=\"border:1px solid; padding: 4px\"\u003e\u003ca href=\"https://www.w3schools.com\"\u003ebrandnewreactnative-1.5.0-04159ec+123-CTE\u003c/a\u003e\u003c/td\n  \u003c/tr\u003e\n\u003c/table\u003e"
         },
         {
-            "activityTitle": "",
-            "activitySubtitle": "",
-            "activityImage": "",
             "facts": [
                 {
-                    "name": "Build Status",
+                    "name": "Deployment Status:",
                     "value": "\u003cspan style=\"color:#359914\"\u003eSuccess\u003c/span\u003e"
-                },
-                {
-                    "name": "Build Number",
-                    "value": "89"
-                },
-                {
-                    "name": "Git Branch",
-                    "value": "master"
-                },
-                {
-                    "name": "Build Triggered",
-                    "value": "Sun, 18 Apr 2021 17:21:21 UTC"
-                },
-                {
-                    "name": "Workflow",
-                    "value": "Teamer"
                 }
             ],
-            "markdown": true,
-            "text": "",
-            "heroImage": {
-                "image": ""
-            }
+            "markdown": true
         }
     ],
     "potentialAction": [
         {
-            "@type": "OpenUri",
-            "name": "Go To Repo",
-            "targets": [
-                {
-                    "os": "default",
-                    "uri": "git@bitbucket.org:GFuzz77/brandnewreactnative.git"
-                }
-            ]
-        },
-        {
-            "@type": "OpenUri",
-            "name": "Go To Build",
-            "targets": [
-                {
-                    "os": "default",
-                    "uri": "https://app.bitrise.io/build/e2145f99096087b1"
-                }
-            ]
-        },
-        {
             "@type": "ActionCard",
-            "name": "Send Feedback",
+            "name": "For Product Owners (alpha)",
+            "inputs": [
+                {
+                    "@type": "TextInput",
+                    "id": "deployerUAT",
+                    "title": "PO's email here",
+                    "isRequired": true
+                }
+            ],
             "actions": [
                 {
                     "@type": "HttpPOST",
@@ -85,7 +47,83 @@
                             "value": null
                         }
                     ],
-                    "body": "{\"hook_info\":{\"type\":\"bitrise\",\"build_trigger_token\":\"wNdFTVz4KfHDUalK8BLApQ\"},\"build_params\":{\"branch\":\"master\"},\"triggered_by\":\"curl\"}"
+                    "body": "{\"hook_info\":{\"type\":\"bitrise\",\"build_trigger_token\":\"wNdFTVz4KfHDUalK8BLApQ\"},\"build_params\":{\"branch\":\"master\"},\"triggered_by\":\"{{deployerUAT.value}}\"}"
+                },
+                {
+                    "@type": "HttpPOST",
+                    "name": "DEPLOY TO CTE",
+                    "isPrimary": true,
+                    "target": "https://app.bitrise.io/app/3928786b7f122c73/build/start.json",
+                    "headers": [
+                        {
+                            "name": "Authorization",
+                            "value": null
+                        }
+                    ],
+                    "body": "{\"hook_info\":{\"type\":\"bitrise\",\"build_trigger_token\":\"wNdFTVz4KfHDUalK8BLApQ\"},\"build_params\":{\"branch\":\"master\"},\"triggered_by\":\"{{deployerUAT.value}}\"}"
+                }
+            ]
+        },
+        {
+            "@type": "ActionCard",
+            "name": "For Developers (Current_PI)",
+            "inputs": [
+                {
+                    "@type": "TextInput",
+                    "id": "deployerCTE",
+                    "title": "Dev's email here",
+                    "isRequired": true
+                }
+            ],
+            "actions": [
+                {
+                    "@type": "HttpPOST",
+                    "name": "DEPLOY TO UAT",
+                    "isPrimary": true,
+                    "target": "https://app.bitrise.io/app/3928786b7f122c73/build/start.json",
+                    "headers": [
+                        {
+                            "name": "Authorization",
+                            "value": null
+                        }
+                    ],
+                    "body": "{\"hook_info\":{\"type\":\"bitrise\",\"build_trigger_token\":\"wNdFTVz4KfHDUalK8BLApQ\"},\"build_params\":{\"branch\":\"master\"},\"triggered_by\":\"{{deployerCTE.value}}\"}"
+                },
+                {
+                    "@type": "HttpPOST",
+                    "name": "DEPLOY TO CTE",
+                    "isPrimary": true,
+                    "target": "https://app.bitrise.io/app/3928786b7f122c73/build/start.json",
+                    "headers": [
+                        {
+                            "name": "Authorization",
+                            "value": null
+                        }
+                    ],
+                    "body": "{\"hook_info\":{\"type\":\"bitrise\",\"build_trigger_token\":\"wNdFTVz4KfHDUalK8BLApQ\"},\"build_params\":{\"branch\":\"master\"},\"triggered_by\":\"{{deployerUAT.value}}\"}"
+                }
+            ]
+        },
+        {
+            "@type": "OpenUri",
+            "name": "See Logs",
+            "targets": [
+                {
+                    "os": "default",
+                    "uri": "https://app.bitrise.io/build/e2145f99096087b1"
+                }
+            ]
+        },
+        {
+            "@type": "ActionCard",
+            "name": "Manual Instructions",
+            "inputs": [
+                {
+                    "@type": "TextInput",
+                    "id": "instructions",
+                    "isMultiline": true,
+                    "title": "yooooooooo",
+                    "value": "hello world\nsecondline"
                 }
             ]
         }
