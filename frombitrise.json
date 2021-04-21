@@ -9,7 +9,6 @@
             "activityTitle": "\u003ch1\u003eKeyz Android\u003c/h1\u003e",
             "activitySubtitle": "Today is Sun, 18 Apr 2021 17:21:21 UTC",
             "activityImage": "https://concrete-userfiles-production.s3.us-west-2.amazonaws.com/repositories/3928786b7f122c73/avatar/avatar.png",
-            "facts": null,
             "markdown": false,
             "text": "\u003ctable style=\"border:1px solid;border-collapse:collapse; padding: 4px\"\u003e\n  \u003ctr\u003e\n    \u003cth style=\"padding: 4px\"\u003ePlayStore Status\u003c/th\u003e\n    \u003cth style=\"padding: 4px\"\u003eEnv\u003c/th\u003e\n    \u003cth style=\"padding: 4px\"\u003eArtifactory Url\u003c/th\u003e\n  \u003c/tr\u003e\n  \u003ctr\u003e\n    \u003ctd style=\"border:1px solid; padding: 4px\"\u003e \u003cb\u003eDeployed\u003c/b\u003e \u003c/td\u003e\n    \u003ctd style=\"border:1px solid; padding: 4px\"\u003e\u003cb\u003eSIT\u003c/b\u003e\u003c/td\u003e\n    \u003ctd style=\"border:1px solid; padding: 4px\"\u003e\u003ca href=\"https://www.w3schools.com\"\u003ebrandnewreactnative-1.5.0-04159ec+123-SIT\u003c/a\u003e\u003c/td\u003e\n  \u003c/tr\u003e\n  \u003ctr\u003e\n    \u003ctd style=\"border:1px solid; padding: 4px\"\u003e Not yet \u003c/td\u003e\n    \u003ctd style=\"border:1px solid; padding: 4px\"\u003e\u003cb\u003eUAT\u003c/b\u003e\u003c/td\u003e\n    \u003ctd style=\"border:1px solid; padding: 4px\"\u003e\u003ca href=\"https://www.w3schools.com\"\u003ebrandnewreactnative-1.5.0-04159ec+123-UAT\u003c/a\u003e\u003c/td\n  \u003c/tr\u003e\n  \u003ctr\u003e\n    \u003ctd style=\"border:1px solid; padding: 4px\"\u003e Not yet \u003c/td\u003e\n    \u003ctd style=\"border:1px solid; padding: 4px\"\u003e\u003cb\u003eCTE\u003c/b\u003e\u003c/td\u003e\n    \u003ctd style=\"border:1px solid; padding: 4px\"\u003e\u003ca href=\"https://www.w3schools.com\"\u003ebrandnewreactnative-1.5.0-04159ec+123-CTE\u003c/a\u003e\u003c/td\n  \u003c/tr\u003e\n\u003c/table\u003e"
         },
@@ -79,7 +78,7 @@
                 {
                     "@type": "HttpPOST",
                     "name": "DEPLOY TO UAT",
-                    "isPrimary": true,
+                    "isDestructive": true,
                     "target": "https://app.bitrise.io/app/3928786b7f122c73/build/start.json",
                     "headers": [
                         {
@@ -122,8 +121,7 @@
                     "@type": "TextInput",
                     "id": "instructions",
                     "isMultiline": true,
-                    "title": "yooooooooo",
-                    "value": "hello world\nsecondline"
+                    "title": "hello world\nsecondline"
                 }
             ]
         }

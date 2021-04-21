@@ -1,0 +1,42 @@
+{
+    "@type": "MessageCard",
+    "@context": "http://schema.org/extensions",
+    "themeColor": "E04504",
+    "title": "RC Build has failed",
+    "summary": "Build has failed",
+    "sections": [
+        {
+            "activityTitle": "\u003ch1\u003eKeyz Android\u003c/h1\u003e",
+            "activitySubtitle": "Triggered on Sun, 18 Apr 2021 17:21:21 UTC",
+            "activityImage": "https://concrete-userfiles-production.s3.us-west-2.amazonaws.com/repositories/3928786b7f122c73/avatar/avatar.png"
+        },
+        {
+            "facts": [
+                {
+                    "name": "Build Status",
+                    "value": "\u003cspan style=\"color:#E04504\"\u003eFail\u003c/span\u003e"
+                },
+                {
+                    "name": "Build Number",
+                    "value": "124"
+                },
+                {
+                    "name": "Workflow",
+                    "value": "Teamer"
+                }
+            ]
+        }
+    ],
+    "potentialAction": [
+        {
+            "@type": "OpenUri",
+            "name": "Go To Build",
+            "targets": [
+                {
+                    "os": "default",
+                    "uri": "https://app.bitrise.io/build/fa7e61ff90cda7dd"
+                }
+            ]
+        }
+    ]
+}
